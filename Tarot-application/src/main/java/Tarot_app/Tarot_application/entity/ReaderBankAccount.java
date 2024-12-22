@@ -26,6 +26,7 @@ public class ReaderBankAccount extends BaseEntityLazy {
   private String bankName;
 
   @ManyToOne(fetch = FetchType.LAZY)
+  @JoinColumn(name = "acc_id", referencedColumnName = "acc_id")
   private Account account;
 
 }

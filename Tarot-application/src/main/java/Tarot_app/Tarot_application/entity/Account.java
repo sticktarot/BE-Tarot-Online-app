@@ -28,14 +28,14 @@ public class Account {
   @Column(name = "phone_number", nullable = false, length = 20)
   private String phoneNumber;
 
-  @ManyToOne()
+  @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "rank_id", referencedColumnName = "rank_id")
   private Rank rank;
 
   @OneToOne(mappedBy = "account", cascade = CascadeType.ALL)
   private UserProfile userProfile;
 
-  @OneToMany(mappedBy = "account", cascade = CascadeType.ALL)
+  @OneToMany(mappedBy = "account", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
   private List<LoginLog> loginLogs;
 
   @OneToOne(mappedBy = "account", cascade = CascadeType.ALL)

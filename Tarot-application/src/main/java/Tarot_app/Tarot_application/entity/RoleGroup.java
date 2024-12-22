@@ -10,7 +10,7 @@ import lombok.*;
 @Table(name = "role_name")
 @AllArgsConstructor
 @NoArgsConstructor
-public class RoleName extends BaseEntityLazy {
+public class RoleGroup extends BaseEntityLazy {
   @Id
   @Column(name = "role_id")
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,6 +22,6 @@ public class RoleName extends BaseEntityLazy {
   @Column(name = "role_group", unique = true)
   private String roleGroup;
 
-  @OneToOne(mappedBy = "roleName", cascade = CascadeType.ALL)
-  private RolePermission rolePermission;
+  @OneToOne(mappedBy = "roleGroup", cascade = CascadeType.ALL)
+  private GroupPermission groupPermission;
 }

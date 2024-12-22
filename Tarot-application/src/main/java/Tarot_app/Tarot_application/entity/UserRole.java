@@ -20,6 +20,6 @@ public class UserRole {
   private Account account;
 
   @ManyToOne
-  @JoinColumn(name = "role_name_id", referencedColumnName = "role_id")
-  private RoleName roleName;
+  @JoinColumn(name = "role_group_id", referencedColumnName = "role_id")
+  private RoleGroup roleGroup;
 }

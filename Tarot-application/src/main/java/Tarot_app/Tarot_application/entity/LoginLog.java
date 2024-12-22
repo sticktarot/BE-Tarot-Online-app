@@ -17,8 +17,8 @@ public class LoginLog extends BaseEntityLazy {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private int logId;
 
-  @ManyToOne
-  @JoinColumn(name = "username", referencedColumnName = "username")
+  @ManyToOne(fetch = FetchType.LAZY)
+  @JoinColumn(name = "username", referencedColumnName = "username", nullable = false)
   private Account account;
 
   @Column(name = "datetime")

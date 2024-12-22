@@ -64,6 +64,6 @@ public class UserProfile extends BaseEntityLazy {
   @JoinColumn(name = "acc_id")
   private Account account;
 
-  @OneToMany(mappedBy = "userProfile", cascade = CascadeType.ALL)
+  @OneToMany(mappedBy = "userProfile", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
   private List<MediaFile> mediaFiles;
 }

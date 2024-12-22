@@ -7,18 +7,18 @@ import lombok.*;
 @Getter
 @Setter
 @Entity
-@Table(name = "role_permission")
+@Table(name = "group_permission")
 @AllArgsConstructor
 @NoArgsConstructor
-public class RolePermission extends BaseEntityLazy {
+public class GroupPermission extends BaseEntityLazy {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  @Column(name = "permission_id")
+  @Column(name = "group_id")
   private int permissionId;
 
   @OneToOne
   @JoinColumn(name = "role_group", referencedColumnName = "role_group")
-  private RoleName roleName;
+  private RoleGroup roleGroup;
 
   @Column(name = "permissions")
   private String permissions;

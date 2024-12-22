@@ -16,7 +16,7 @@ public class MediaFile extends BaseEntityLazy {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private int fileId;
 
-  @ManyToOne
+  @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "acc_id", referencedColumnName = "acc_id")
   private UserProfile userProfile;
 
