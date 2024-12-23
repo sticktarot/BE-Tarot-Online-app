@@ -1,6 +1,6 @@
-package Tarot_app.Tarot_application.entity;
+package app.tarot.be.entity;
 
-import Tarot_app.Tarot_application.entity.core.BaseEntityLazy;
+import app.tarot.be.entity.core.BaseEntityLazy;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -14,7 +14,7 @@ public class MediaFile extends BaseEntityLazy {
   @Id
   @Column(name = "file_id")
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private int fileId;
+  private Long fileId;
 
   @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "acc_id", referencedColumnName = "acc_id")

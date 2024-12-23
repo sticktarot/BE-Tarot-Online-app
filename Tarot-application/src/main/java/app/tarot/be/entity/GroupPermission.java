@@ -1,6 +1,6 @@
-package Tarot_app.Tarot_application.entity;
+package app.tarot.be.entity;
 
-import Tarot_app.Tarot_application.entity.core.BaseEntityLazy;
+import app.tarot.be.entity.core.BaseEntityLazy;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -14,7 +14,7 @@ public class GroupPermission extends BaseEntityLazy {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "group_id")
-  private int permissionId;
+  private Long permissionId;
 
   @OneToOne
   @JoinColumn(name = "role_group", referencedColumnName = "role_group")

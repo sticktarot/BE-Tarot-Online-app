@@ -1,6 +1,6 @@
-package Tarot_app.Tarot_application.entity;
+package app.tarot.be.entity;
 
-import Tarot_app.Tarot_application.entity.core.BaseEntityLazy;
+import app.tarot.be.entity.core.BaseEntityLazy;
 import jakarta.persistence.*;
 import java.util.List;
 import lombok.*;
@@ -15,7 +15,7 @@ public class UserProfile extends BaseEntityLazy {
 
   @Id
   @Column(name = "acc_id")
-  private int accId;
+  private Long accId;
 
   @Column(name = "full_name")
   private String fullName;

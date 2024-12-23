@@ -1,7 +1,7 @@
-package Tarot_app.Tarot_application.entity.core;
+package app.tarot.be.entity.core;
 
-import Tarot_app.Tarot_application.entity.Account;
-import Tarot_app.Tarot_application.util.CommonUtil;
+import app.tarot.be.entity.Account;
+import app.tarot.be.util.CommonUtil;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.ColumnDefault;

@@ -1,5 +1,6 @@
-package Tarot_app.Tarot_application.entity;
+package app.tarot.be.entity;
 
+import app.tarot.be.entity.core.BaseEntityLazy;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -9,10 +10,10 @@ import lombok.*;
 @Table(name = "wallet_info")
 @AllArgsConstructor
 @NoArgsConstructor
-public class WalletInfo {
+public class WalletInfo extends BaseEntityLazy {
   @Id
   @Column(name = "acc_id")
-  private int accId;
+  private Long accId;
 
   @Column(name = "account_balance")
   private Long accountBalance;

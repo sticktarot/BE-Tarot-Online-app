@@ -1,4 +1,4 @@
-package Tarot_app.Tarot_application;
+package app.tarot.be;
 
 import jakarta.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;
