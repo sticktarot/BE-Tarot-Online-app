@@ -32,8 +32,8 @@ public class UserProfile extends BaseEntityLazy {
   @Column(name = "dob")
   private String dob;
 
-  @Column(name = "address", length = 65535) // define text type
-  private String address;
+  @Column(name = "address")
+  private Address address;
 
   @Column(name = "zodiac", length = 50)
   private String zodiac;
@@ -55,9 +55,6 @@ public class UserProfile extends BaseEntityLazy {
 
   @Column(name = "introduce", length = 65535)
   private String introduce;
-
-  @Column(name = "address_city", length = 65535)
-  private String addressCity;
 
   @OneToOne
   @MapsId
