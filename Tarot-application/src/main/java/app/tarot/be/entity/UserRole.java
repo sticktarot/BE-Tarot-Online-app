@@ -1,5 +1,6 @@
-package Tarot_app.Tarot_application.entity;
+package app.tarot.be.entity;
 
+import app.tarot.be.entity.core.BaseEntityLazy;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -9,11 +10,11 @@ import lombok.*;
 @Table(name = "user_role")
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserRole {
+public class UserRole extends BaseEntityLazy {
   @Id
   @Column(name = "role_id")
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private int roleId;
+  private Long roleId;
 
   @ManyToOne
   @JoinColumn(name = "acc_id", referencedColumnName = "acc_id")

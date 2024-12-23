@@ -1,6 +1,6 @@
-package Tarot_app.Tarot_application.entity;
+package app.tarot.be.entity;
 
-import Tarot_app.Tarot_application.entity.core.BaseEntityLazy;
+import app.tarot.be.entity.core.BaseEntityLazy;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -14,7 +14,7 @@ public class ReaderBankAccount extends BaseEntityLazy {
   @Id
   @Column(name = "bank_id")
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private int bankId;
+  private Long bankId;
 
   @Column(name = "bank_number", length = 50)
   private String bankNumber;

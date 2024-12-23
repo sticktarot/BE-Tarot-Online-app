@@ -1,5 +1,6 @@
-package Tarot_app.Tarot_application.controller;
+package app.tarot.be.controller;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,9 +11,9 @@ import java.util.List;
 @RequestMapping("/test")
 public class TestSwaggerController {
     @GetMapping
-    public List<String> getAllUsers() {
+    public ResponseEntity<List<String>> getAllUsers() {
 
-        return List.of("Long", "Phuong", "My");
+        return ResponseEntity.ok(List.of("Long", "Phuong", "My"));
     }
 
 }

@@ -1,4 +1,4 @@
-package Tarot_app.Tarot_application.util;
+package app.tarot.be.util;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;

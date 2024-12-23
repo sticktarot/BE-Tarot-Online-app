@@ -1,4 +1,4 @@
-package Tarot_app.Tarot_application.configuration;
+package app.tarot.be.configuration;
 
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;

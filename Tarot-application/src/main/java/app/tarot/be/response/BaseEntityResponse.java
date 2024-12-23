@@ -1,6 +1,6 @@
-package Tarot_app.Tarot_application.response;
+package app.tarot.be.response;
 
-import Tarot_app.Tarot_application.util.CommonUtil;
+import app.tarot.be.util.CommonUtil;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

@@ -1,4 +1,4 @@
-package Tarot_app.Tarot_application;
+package app.tarot.be;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

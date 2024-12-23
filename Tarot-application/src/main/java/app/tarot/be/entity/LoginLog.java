@@ -1,6 +1,6 @@
-package Tarot_app.Tarot_application.entity;
+package app.tarot.be.entity;
 
-import Tarot_app.Tarot_application.entity.core.BaseEntityLazy;
+import app.tarot.be.entity.core.BaseEntityLazy;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 import lombok.*;
@@ -15,7 +15,7 @@ public class LoginLog extends BaseEntityLazy {
   @Id
   @Column(name = "log_id")
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private int logId;
+  private Long logId;
 
   @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "username", referencedColumnName = "username", nullable = false)

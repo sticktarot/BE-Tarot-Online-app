@@ -1,5 +1,6 @@
-package Tarot_app.Tarot_application.entity;
+package app.tarot.be.entity;
 
+import app.tarot.be.entity.core.BaseEntityLazy;
 import jakarta.persistence.*;
 import java.util.List;
 import lombok.*;
@@ -10,11 +11,11 @@ import lombok.*;
 @Table(name = "account")
 @AllArgsConstructor
 @NoArgsConstructor
-public class Account {
+public class Account extends BaseEntityLazy {
   @Id
   @Column(name = "acc_id")
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private int accId;
+  private Long accId;
 
   @Column(name = "username", nullable = false, unique = true, length = 100)
   private String username;
