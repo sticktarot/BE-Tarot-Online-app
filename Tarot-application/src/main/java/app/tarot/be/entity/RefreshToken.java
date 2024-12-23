@@ -18,7 +18,7 @@ public class RefreshToken extends BaseEntityLazy {
   private int tokenId;
 
   @ManyToOne
-  @JoinColumn(name = "username", referencedColumnName = "username")
+  @JoinColumn(name = "phone_number", referencedColumnName = "phone_number")
   private Account account;
 
   @Column(name = "device")
