@@ -22,9 +22,6 @@ public class Address {
     @NotNull(message = "Ward cannot be null")
     private String ward;
 
-    @NotNull(message = "Postal code cannot be null")
-    private String postalCode;
-
     @NotNull(message = "Address detail cannot be null")
     private String addressDetail;
 }
