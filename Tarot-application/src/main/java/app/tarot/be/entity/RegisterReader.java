@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.NonNull;
 
 @Entity
 @Data
@@ -15,13 +16,13 @@ public class RegisterReader{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "full_name")
+    @Column(name = "full_name", nullable = false,length = 100)
     private String fullName;
 
-    @Column(name = "gender")
+    @Column(name = "gender", nullable = false)
     private int gender;
 
-    @Column(name = "dob")
+    @Column(name = "dob", nullable = false)
     private String dob;
 
     @Column(name = "experience", length = 65535)
@@ -40,9 +41,10 @@ public class RegisterReader{
     private String introduce;
 
     @Embedded
+    @NonNull
     private Address address;
 
-    @Column(name = "email", nullable = false)
+    @Column(name = "link_facebook", nullable = false)
     private String linkFacebook;
 
     @Column(name = "email", nullable = false)

@@ -17,7 +17,7 @@ public class UserProfile extends BaseEntityLazy {
   @Column(name = "acc_id")
   private Long accId;
 
-  @Column(name = "full_name")
+  @Column(name = "full_name", nullable = false, length = 100)
   private String fullName;
 
   @Column(name = "nickname")
@@ -26,13 +26,14 @@ public class UserProfile extends BaseEntityLazy {
   @Column(name = "avatar", length = 65535)
   private String avatar;
 
-  @Column(name = "gender")
+  @Column(name = "gender", nullable = false)
   private int gender;
 
-  @Column(name = "dob")
+  @Column(name = "dob", nullable = false)
   private String dob;
 
   @Embedded
+  @NonNull
   private Address address;
 
   @Column(name = "experience", length = 65535)
