@@ -17,13 +17,16 @@ public class Account extends BaseEntityLazy {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long accId;
 
+  @Column(name = "username", nullable = false, unique = true, length = 100)
+  private String username;
+
   @Column(name = "password", nullable = false, length = 100)
   private String password;
 
-  @Column(name = "email", nullable = false)
+  @Column(name = "email", nullable = false, unique = true)
   private String email;
 
-  @Column(name = "phone_number", nullable = false,unique = true, length = 10)
+  @Column(name = "phone_number", nullable = false, length = 20, unique = true)
   private String phoneNumber;
 
   @ManyToOne(fetch = FetchType.LAZY)

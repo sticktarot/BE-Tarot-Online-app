@@ -18,7 +18,7 @@ public class LoginLog extends BaseEntityLazy {
   private Long logId;
 
   @ManyToOne(fetch = FetchType.LAZY)
-  @JoinColumn(name = "acc_id", referencedColumnName = "acc_id", nullable = false)
+  @JoinColumn(name = "phone_number", referencedColumnName = "phone_number", nullable = false)
   private Account account;
 
   @Column(name = "datetime")
