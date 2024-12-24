@@ -32,14 +32,8 @@ public class UserProfile extends BaseEntityLazy {
   @Column(name = "dob")
   private String dob;
 
-  @Column(name = "address")
+  @Embedded
   private Address address;
-
-  @Column(name = "zodiac", length = 50)
-  private String zodiac;
-
-  @Column(name = "rank_name", length = 50)
-  private String rankName;
 
   @Column(name = "experience", length = 65535)
   private String experience;

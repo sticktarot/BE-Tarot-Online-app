@@ -42,6 +42,7 @@ public class RegisterReader{
     @Embedded
     private Address address;
 
+    @Column(name = "email", nullable = false)
     private String linkFacebook;
 
     @Column(name = "email", nullable = false)
