@@ -17,6 +17,9 @@ public class Account extends BaseEntityLazy {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long accId;
 
+  @Column(name = "username", nullable = false, unique = true, length = 100)
+  private String username;
+
   @Column(name = "password", nullable = false, length = 100)
   private String password;
 
